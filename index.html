@@ -1,0 +1,133 @@
+<!DOCType html>
+
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <title>jt - james timotiwu</title>
+    </head>
+    
+    <style type="text/css">
+        body {
+
+            background-color: #FFF;
+
+            max-width: 1200px;
+            margin: 0 auto !important;
+            float: none !important;
+            /* font-family: 'Helvetica', sans-serif; */
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 400;
+
+        }
+
+        body:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+            
+        a {
+            color: #000;
+            text-decoration:none;
+        }
+        
+        a:hover {
+            color: #00A0C6;
+            text-decoration: none;
+            cursor:pointer;
+        }
+
+        .block-parent {
+            
+        }
+
+        .header {
+            /* margin-top: 40px; 
+            margin-left: 40px; */
+        
+            /* border: 3px solid red;*/
+            height: auto;/* 15vh; modified*/
+            width: 500px; /*modified*/
+            /*font-family: 'Helvetica', sans-serif;*/
+            font-weight: bold;
+            font-size: 24.5px;
+            text-align: left;
+            color: #000;
+            /* float left to place text boxes right next to each other */
+            float: left;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            font-style: italic;
+
+        }
+
+        .block-bio {
+            overflow: hidden; /* keeps float in box */
+            /* border: 3px solid blue;*/
+            margin-top: 9vh;
+            margin-left: 4vh;
+
+            font-size: 18px;
+            text-align: justify;
+            color: #000;
+            /*min height size of browser*/
+           /* float: left; */
+            line-height: 32px;
+            letter-spacing: 1px;
+            margin-right: 0vw; /* 9vw;*/
+        }
+
+        .block-project {
+            overflow: hidden; /* keeps float in box */
+            /* border: 3px solid blue; */
+            margin-top: 21vh;
+            margin-left: 7vh;
+
+            font-size: 15px;
+            text-align: left;
+            color: #000;
+           /* float: left; */
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,300italic,600italic|Source+Sans+Pro:400,300,600,400italic,600italic" rel="stylesheet" type="text/css">
+
+    <body>
+
+        <!-- main splash/bio page -->
+        <div class="block-bio">
+            <div class="header">
+                <!-- <div style="padding-left: 3vh">james timotiwu</div> -->
+                <a style="padding-left: 3vh;" href="#">james timotiwu</a>
+                <img style="height:85%; width:85%; padding-top: 9vh;" src="images/bio2.jpg" >
+            </div>
+                <!-- <img style="float: right; height:10%; width:10%; padding-left: 7vh;" src="images/topleft.jpg"> -->
+            <div style="float: center; margin-top: 25vh;">
+            an undergraduate electrical & computer engineering student at the
+            <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign
+            </a>
+            interested in robotics, comp vis, iot, research, photography. previously worked two summers at NASA.
+           
+            </div>
+        </div>
+
+        <!-- project header -->
+        <div id="project" class="block-project"> 
+            <div class="header">projects</div>
+            work i've done previously out of interest
+        </div>
+
+        <!-- list of projects here -->
+        
+
+        <!-- experiences  -->
+        
+        <div id="experiences" class="block-project"> 
+            <div class="header">been there done that</div>
+            things i've lived through the past few years
+        </div>
+    </body>
+</html>
