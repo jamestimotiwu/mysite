@@ -1,0 +1,106 @@
+body {
+    background-color: #FFF;
+
+    max-width: 1200px;
+    margin: 0 auto !important;
+    float: none !important;
+    /* font-family: 'Helvetica', sans-serif; */
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+}
+
+body:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+            
+a {
+    color: #000;
+    text-decoration:none;
+}
+        
+a:hover {
+    color: #00A0C6;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.block-parent {
+            
+}
+
+.social-icon {
+    background-color: black;
+    fill: white;
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-transition: background-color 150ms ease-in-out;
+    -moz-transition: background-color 150ms ease-in-out;
+    -ms-transition: background-color 170ms ease-in-out;
+    -o-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+}
+
+.social-icon:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.header {
+    margin-top: 7vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+.profile-picture {
+    /* margin-top: 40px; 
+    margin-left: 40px; */
+        
+    /* border: 3px solid red;*/
+    height: auto;/* 15vh; modified*/
+    width: 500px; /*modified*/
+    /*font-family: 'Helvetica', sans-serif;*/
+    font-weight: bold;
+    font-size: 24.5px;
+    text-align: left;
+    color: #000;
+    /* float left to place text boxes right next to each other */
+    float: left;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+.block-bio {
+    overflow: hidden; /* keeps float in box */
+    /* border: 3px solid blue;*/
+    /* margin-top: 9vh; */
+    margin-left: 4vh;
+
+    font-size: 18px;
+    text-align: justify;
+    color: #000;
+    /*min height size of browser*/
+    /* float: left; */
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin-right: 0vw; /* 9vw;*/
+}
+
+.block-project {
+    overflow: hidden; /* keeps float in box */
+    /* border: 3px solid blue; */
+    margin-top: 21vh;
+    margin-left: 7vh;
+
+    font-size: 15px;
+    text-align: left;
+    color: #000;
+    /* float: left; */
+}
