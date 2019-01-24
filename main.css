@@ -150,3 +150,33 @@ li.is-this {
     color: rgb(90, 90, 90) !important;
     z-index: 100;
 }
+
+/** PHOTO PAGE **/
+
+.photo-name {
+    /* font-family: Avenir,Lato,sans-serif; */
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 0px;
+    font-size: 15px;
+    margin-bottom: 5vh;
+    text-align: center;
+    float:center;
+    color: #000;
+}
+
+.block-photo {
+    /* background-color: rgba(81, 180, 88, 0.767); */
+    font-family: 'Karla', sans-serif;
+    overflow: hidden; /* keeps float in box */
+    margin-left: 6.5vw;
+    font-size: 13px;
+    text-align: justify;
+    color: #000;
+    /*min height size of browser*/
+    /* float: left; */
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin-right: 6.5vw; /* 9vw;*/
+    padding-bottom: 10px;
+}
