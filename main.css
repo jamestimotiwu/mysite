@@ -16,8 +16,8 @@ body:after {
 }
             
 a {
-    color: #000;
-    text-decoration:none;
+    color: #fff;
+    text-decoration: none;
 }
         
 a:hover {
@@ -26,71 +26,83 @@ a:hover {
     cursor:pointer;
 }
 
-.block-parent {
-            
+.profile-picture {
+    width: 450px;
+    height: 360px;
+    background-image: url(images/propic1-2.jpg);
+    background-size: cover;
+    float: left;
 }
 
 .social-icon {
-    background-color: black;
-    fill: white;
-    width: 2em;
-    height: 2em;
+    /* background-color: black; */
+    /* fill: white; */
+    padding-left: 7px;
+    padding-right: 7px;
+    fill: black; /*currentColor*/
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
     overflow: hidden;
-    -webkit-transition: background-color 150ms ease-in-out;
-    -moz-transition: background-color 150ms ease-in-out;
-    -ms-transition: background-color 170ms ease-in-out;
-    -o-transition: background-color 150ms ease-in-out;
-    transition: background-color 150ms ease-in-out;
+    -webkit-transition: fill 200ms ease-in-out;
+    -moz-transition: fill 200ms ease-in-out;
+    -ms-transition: fill 200ms ease-in-out;
+    -o-transition: fill 200ms ease-in-out;
+    transition: fill 200ms ease-in-out;
 }
-
+/* to hover icon */
 .social-icon:hover {
-    background-color: gray;
+    fill: rgba(81, 180, 88, 0.767);;
     cursor: pointer;
 }
 
+.name {
+    /* font-family: Avenir,Lato,sans-serif; */
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 0px;
+    font-size: 25px;
+    padding-left: 70px;
+    padding-bottom: 4vh;
+}
+
 .header {
-    margin-top: 7vh;
+    margin-top: 10vh;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
     text-align: center;
-}
-.profile-picture {
-    /* margin-top: 40px; 
-    margin-left: 40px; */
-        
-    /* border: 3px solid red;*/
-    height: auto;/* 15vh; modified*/
-    width: 500px; /*modified*/
-    /*font-family: 'Helvetica', sans-serif;*/
-    font-weight: bold;
-    font-size: 24.5px;
-    text-align: left;
-    color: #000;
-    /* float left to place text boxes right next to each other */
-    float: left;
-
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    font-style: italic;
 }
 
 .block-bio {
+    background-color: rgba(81, 180, 88, 0.767);
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue;*/
     /* margin-top: 9vh; */
-    margin-left: 4vh;
-
-    font-size: 18px;
+    margin-left: 3.5vw;
+    font-size: 15px;
     text-align: justify;
-    color: #000;
+    height: 360px;
+    color: white;
     /*min height size of browser*/
     /* float: left; */
     line-height: 32px;
     letter-spacing: 1px;
-    margin-right: 0vw; /* 9vw;*/
+    margin-right: 5vw; /* 9vw;*/
+}
+
+.desc {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.bio {
+    margin-left: 450px;
+    padding-right: 5%;
+    padding-top: 70px;
+    text-align: left;
 }
 
 .block-project {
@@ -98,9 +110,43 @@ a:hover {
     /* border: 3px solid blue; */
     margin-top: 21vh;
     margin-left: 7vh;
-
     font-size: 15px;
     text-align: left;
     color: #000;
     /* float: left; */
+}
+
+ul.is-what {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 0px;
+    z-index: 120;
+    transition: top 1s;
+    -moz-transition: top 1s;
+    -webkit-transition: top 1s;
+    -o-transition: top 1s;
+}
+
+li.is-this {
+    list-style-type: none;
+    color: #fff;
+}
+
+.smooth {
+    color: #fff;
+    margin: 0;
+}
+
+#is-out-of-box {
+    font-weight: bold;
+    transition: top 1s;
+    -moz-transition: top 1s;
+    -webkit-transition: top 1s;
+    -o-transition: top 1s;
+    position: absolute;
+    width: 60px;
+    text-align: right;
+    color: rgb(90, 90, 90) !important;
+    z-index: 100;
 }
