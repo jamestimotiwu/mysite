@@ -46,14 +46,41 @@
             <p id="is-out-of-box" class="smooth">is a(n)</p>
             <div class="desc">
                 <ul class="is-what">
-                    <li class="is-this smooth"> Engineer. </li>
-                    <li class="is-this smooth"> Student at the <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign.
+                    <li class="i-am smooth"> Engineer. </li>
+                    <li class="i-am smooth"> Student @ <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign.
                     </a></li>
-                    <li class="is-this smooth"> <a href="/src/mysite/photo.html"> Photographer.
+                    <li class="i-am smooth"> <a href="/src/mysite/photo.html"> Photographer.
                     </a></li>
-                    <li class="is-this smooth"> Avid listener to Alternative Rock/Indie music.</li>
+                    <li class="i-am smooth"> Avid listener to Alternative Indie/Rock/Electronic music.</li>
+                    <li class="i-am smooth"> Architecture enthusiast.</li>
                 </ul>
             </div>
+
+            <!-- ABOUT PAGE-->
+            <a class="about trans"><i class="fa fa-file-text" aria-hidden="true"></i></a> <!-- LINK TO GO TO ENG PAGE -->
+
+            <div id="aboutHolder">   
+                    <div class="row"> 
+                    <div id="about-container" class="col-md-12" style="display:none;">
+                        
+                        <a class="home trans"><i class="fa fa-home" aria-hidden="true"></i></a><br /> <!-- LINK TO RETURN HOME-->
+                        <div class="subabout">i am a</div>
+                            an undergraduate electrical & computer engineering student at the
+                            <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign
+                            </a>
+                            interested in robotics, comp vis, iot, research, photography. previously worked two summers at NASA.
+                        <div class="subabout">previously</div> 
+                            ep intern @ <a href="http://google.com/" target="_blank">Google</a>, swe intern @ <a href="https://www.twosigma.com" target="_blank">Two Sigma</a>, <a href="http://www.intel.com/" target="_blank">Intel</a><br/>
+                            some of my past projects: <a href="http://graceguan.me/stretch">stretch reminder</a>,<br/><a href="http://graceguan.me/apaa">android phone unlocker app</a>
+                        <div class="subsubabout">
+                            graceguan [at] princeton.edu<br/>social media: @guanzgrace<br/>
+                        </div>
+                            <!--<a href="https://en.wikipedia.org/wiki/Spirograph" target="_blank">what's the background?</a>-->
+                        </div>
+                    </div>
+                </div>
+
+            <!-- ABOUT PAGE-->
 
             <script>
                     var list = document.querySelectorAll("ul")[0];
@@ -62,7 +89,7 @@
                     var images = document.querySelectorAll("#images")[0];
                     var resetIsPosition;
                     
-                    isOut.style.top = "300.35px";
+                    isOut.style.top = "" + listItems[0].getBoundingClientRect().top + "px";
                     isOut.style.display = "block";
                     for (var i = 0; i < listItems.length; i++) {
                         listItems[i].onmouseover = function(){
@@ -71,7 +98,7 @@
                         };
                     };
                     list.onmouseout = function(){
-                        resetIsPosition = setTimeout(function(){isOut.style.top = "300.35px"; }, 750);
+                        resetIsPosition = setTimeout(function(){isOut.style.top = "" + listItems[0].getBoundingClientRect().top + "px"; }, 750);
                     };
             </script>
                 <!-- </ul> an undergraduate electrical & computer engineering student at the
@@ -81,6 +108,20 @@
         -->
             <!--                                                      -->
 
+            <!-- FADE OUT SCRIPT -->
+            <script>
+                    $(".about").click(function() { 
+                        $("#home-container").fadeOut('fast', function() { 
+                            $("#about-container").fadeIn('slow'); 
+                        } );
+                    } );
+                    $(".home").click(function() {
+                        $("#about-container").fadeOut('fast', function() {
+                            $("#home-container").fadeIn('slow');
+                        });
+                    });
+                    $(".home").click();
+            </script>
 
             </div>
         </div>
