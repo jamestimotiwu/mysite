@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Karla|Roboto+Condensed" rel="stylesheet">
 
 
-    <body>
+    <body style="overflow: hidden;"> <!-- overflow hidden only in index page to prevent transform from escaping page-->
         <!-- main splash/bio page -->
 
         <!-- link icons and stuffs -->
@@ -48,10 +48,10 @@
 
                 <div class="desc">
                     <ul class="is-what">
-                        <li class="i-am smooth"> <a id="about" class="trans">Engineer.</a> </li>
+                        <li class="i-am smooth"> <a id="about" class="trans">Software Engineer.</a> </li>
                         <li class="i-am smooth"> Student @ <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois. </a></li>
-                        <li class="i-am smooth"> <a href="/src/mysite/photo.html"> Photographer. </a></li>
-                        <li class="i-am smooth"> Avid listener to Alternative Indie/Rock/Electronic music.</li>
+                        <li class="i-am smooth"> <a id="bioslide" href="/src/mysite/photo.html" class="trans"> Photographer. </a></li>
+                        <li class="i-am smooth"> <a id="slideout" href="https://open.spotify.com/user/kwenn?si=kKkrbTlXTs2swzspmJn22Q" class="trans" >Avid listener to Alternative Indie/Rock/Electronic music. </a></li>
                         <li class="i-am smooth"> Architecture enthusiast.</li>
                     </ul>
                 </div>
@@ -62,13 +62,13 @@
             <div class="engineer-block" style="display:none;">
                 <!-- LINK TO RETURN HOME-->
                 an undergraduate electrical & computer engineering student at the
-                <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign </a><br/>
-                formerly swe intern @ <a href="http://microsoft.com/" target="_blank">Microsoft</a>, research and sde intern @ <a href="https://www.nasa.gov" target="_blank">NASA</a><br/>
+                <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois at Urbana-Champaign </a><br/>
+                formerly swe intern @ <a style="font-style: italic" href="http://microsoft.com/" target="_blank">Microsoft</a>, research and sde intern @ <a style="font-style: italic" href="https://www.nasa.gov" target="_blank">NASA</a><br/>
                 <a id="home" class="trans">return.</a>
             </div>
 
             <!-- ABOUT PAGE-->
-            
+
             <script>
                     var list = document.querySelectorAll("ul")[0];
                     var listItems = document.querySelectorAll("li");
@@ -113,8 +113,8 @@
                 home.addEventListener('animationend', function(e) {
                     if(isHome == false) {
                         home.style.display = "none";
-                        engineer.style.animation = "fadeIn 0.8s";
-                        engineer.style.WebkitAnimation = "fadeIn 0.8s";
+                        engineer.style.animation = "fadeIn 0.5s";
+                        engineer.style.WebkitAnimation = "fadeIn 0.5s";
                         // engineer.classList.toggle('transitionin');
                         engineer.style.display = "block";
                         console.log('ishome is false');
@@ -125,13 +125,35 @@
                     if(isHome == true) {
                         engineer.style.display = "none";
                         // home.classList.toggle('transitionin');
-                        home.style.animation = "fadeIn 0.8s";
-                        home.style.WebkitAnimation = "fadeIn 0.8s";
+                        home.style.animation = "fadeIn 0.5s";
+                        home.style.WebkitAnimation = "fadeIn 0.5s";
                         home.style.display = "block";
                         console.log('ishome is true');
                     }
                 });
                 
+            </script>
+
+            <script>
+                var block = document.querySelector('.block-bio');
+                var head = document.querySelector('.header');
+                var body = document.querySelector('body');
+
+                document.getElementById('slideout').onclick = function(e) {
+                    block.classList.toggle('slide-down');
+                    head.classList.toggle('slide-up');
+                    body.classList.toggle('color-transition');
+                    e.preventDefault();
+                    setTimeout(function() { window.location.href = document.getElementById('slideout').href;}, 280); 
+                    console.log('Slide just happened');
+                }
+
+                document.getElementById('bioslide').onclick = function(e) {
+                    block.classList.toggle('slide-down');
+                    e.preventDefault();
+                    setTimeout(function() { window.location.href = document.getElementById('bioslide').href;}, 500); //timeout to prevent page from reloading before ani
+                }
+
             </script>
 
             </div>

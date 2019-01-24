@@ -1,6 +1,5 @@
 body {
     background-color: #FFF;
-
     max-width: 1200px;
     margin: 0 auto !important;
     float: none !important;
@@ -106,6 +105,14 @@ a:hover {
     text-align: left;
 }
 
+.engineer-block {
+    margin-left: 450px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 70px;
+    text-align: left;
+}
+
 .block-project {
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue; */
@@ -154,10 +161,10 @@ li.i-am {
 
 /** ENGINEER PAGE **/
 .trans {
-    -webkit-transition: opacity 0.2s linear; 
-    -webkit-transition: all 0.2s ease-in-out; 
-    -moz-transition: all 0.2s ease-in-out; 
-    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: opacity 150ms linear; 
+    -webkit-transition: all 150ms ease-in-out; 
+    -moz-transition: all 150ms ease-in-out; 
+    -o-transition: all 150ms ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {
@@ -178,24 +185,6 @@ li.i-am {
 @keyframes fadeOut {
     from { opacity: 1; }
       to { opacity: 0; }
-}
-
-.transitionout {
-    -webkit-animation: fadeOut 0.1s;
-    animation: fadeOut 0.1s;
-}
-
-.transitionin {
-    -webkit-animation: fadeIn 0.8s;
-    -webkit-animation: fadeIn 0.8s;
-}
-
-.engineer-block {
-    margin-left: 450px;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 70px;
-    text-align: left;
 }
 
 /** PHOTO PAGE **/
@@ -226,4 +215,45 @@ li.i-am {
     letter-spacing: 0px;
     margin-right: 6.5vw; /* 9vw;*/
     padding-bottom: 10px;
+}
+
+/** SPOTIFY SLIDER **/
+
+.slide-down {
+    animation: slide-down 0.7s forwards;
+    -webkit-animation: slide-down 0.7s forwards;
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(170%); }
+}
+
+@-webkit-keyframes slide-down {
+    0% { -webkit-transform: translateY(0%); }
+    100% { -webkit-transform: translateY(170%); }
+}
+
+
+.slide-up {
+    animation: slide-up 0.5s forwards;
+    -webkit-animation: slide-up 0.5s forwards;
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-200%); }
+}
+
+@-webkit-keyframes slide-up {
+    0% { -webkit-transform: translateY(0%); }
+    100% { -webkit-transform: translateY(-200%); }
+}
+
+.color-transition {
+    background-color: rgb(0, 0, 0);
+    -webkit-transition: background-color 700ms ease-out;
+    -moz-transition: background-color 700ms ease-out;
+    -o-transition: background-color 700ms ease-out;
+    transition: background-color 700ms ease-out;
 }
