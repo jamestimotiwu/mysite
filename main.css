@@ -62,7 +62,7 @@ a:hover {
     font-weight: bold;
     font-family: 'Karla', sans-serif;
     letter-spacing: 0px;
-    font-size: 25px;
+    font-size: 27px;
     padding-left: 70px;
     padding-bottom: 4vh;
 }
@@ -123,10 +123,10 @@ ul.is-what {
     margin: 0;
     top: 0px;
     z-index: 120;
-    transition: top 1s;
-    -moz-transition: top 1s;
-    -webkit-transition: top 1s;
-    -o-transition: top 1s;
+    transition: top 0.7s;
+    -moz-transition: top 0.7s;
+    -webkit-transition: top 0.7s;
+    -o-transition: top 0.7s;
 }
 
 li.i-am {
@@ -141,10 +141,10 @@ li.i-am {
 
 #is-out-of-box {
     font-weight: bold;
-    transition: top 1s;
-    -moz-transition: top 1s;
-    -webkit-transition: top 1s;
-    -o-transition: top 1s;
+    transition: top 0.7s;
+    -moz-transition: top 0.7s;
+    -webkit-transition: top 0.7s;
+    -o-transition: top 0.7s;
     position: absolute;
     width: 60px;
     text-align: right;
@@ -154,12 +154,49 @@ li.i-am {
 
 /** ENGINEER PAGE **/
 .trans {
-    -webkit-transition: opacity 0.7s linear; 
-    -webkit-transition: all 0.7s ease-in-out; 
-    -moz-transition: all 0.7s ease-in-out; 
-    -o-transition: all 0.7s ease-in-out;
+    -webkit-transition: opacity 0.2s linear; 
+    -webkit-transition: all 0.2s ease-in-out; 
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out;
 }
 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+.transitionout {
+    -webkit-animation: fadeOut 0.1s;
+    animation: fadeOut 0.1s;
+}
+
+.transitionin {
+    -webkit-animation: fadeIn 0.8s;
+    -webkit-animation: fadeIn 0.8s;
+}
+
+.engineer-block {
+    margin-left: 450px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 70px;
+    text-align: left;
+}
 
 /** PHOTO PAGE **/
 

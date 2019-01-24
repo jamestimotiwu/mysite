@@ -41,47 +41,34 @@
                 <!-- <img style="height:auto; width:450px; float: left;" src="images/propic1-2.jpg" >-->
                 <!-- <img style="float: right; height:10%; width:10%; padding-left: 7vh;" src="images/topleft.jpg"> -->
             <div class="bio">
-            <span class="name">James Timotiwu</span>
+
+                <span class="name">James Timotiwu.</span>
             <!--                                                    -->
-            <p id="is-out-of-box" class="smooth">is a(n)</p>
-            <div class="desc">
-                <ul class="is-what">
-                    <li class="i-am smooth"> Engineer. </li>
-                    <li class="i-am smooth"> Student @ <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign.
-                    </a></li>
-                    <li class="i-am smooth"> <a href="/src/mysite/photo.html"> Photographer.
-                    </a></li>
-                    <li class="i-am smooth"> Avid listener to Alternative Indie/Rock/Electronic music.</li>
-                    <li class="i-am smooth"> Architecture enthusiast.</li>
-                </ul>
+                <p id="is-out-of-box" class="smooth">is a(n)</p>
+
+                <div class="desc">
+                    <ul class="is-what">
+                        <li class="i-am smooth"> <a id="about" class="trans">Engineer.</a> </li>
+                        <li class="i-am smooth"> Student @ <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois. </a></li>
+                        <li class="i-am smooth"> <a href="/src/mysite/photo.html"> Photographer. </a></li>
+                        <li class="i-am smooth"> Avid listener to Alternative Indie/Rock/Electronic music.</li>
+                        <li class="i-am smooth"> Architecture enthusiast.</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- ABOUT PAGE-->
-            <a class="about trans"><i class="fa fa-file-text" aria-hidden="true"></i></a> <!-- LINK TO GO TO ENG PAGE -->
-
-            <div id="aboutHolder">   
-                    <div class="row"> 
-                    <div id="about-container" class="col-md-12" style="display:none;">
-                        
-                        <a class="home trans"><i class="fa fa-home" aria-hidden="true"></i></a><br /> <!-- LINK TO RETURN HOME-->
-                        <div class="subabout">i am a</div>
-                            an undergraduate electrical & computer engineering student at the
-                            <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign
-                            </a>
-                            interested in robotics, comp vis, iot, research, photography. previously worked two summers at NASA.
-                        <div class="subabout">previously</div> 
-                            ep intern @ <a href="http://google.com/" target="_blank">Google</a>, swe intern @ <a href="https://www.twosigma.com" target="_blank">Two Sigma</a>, <a href="http://www.intel.com/" target="_blank">Intel</a><br/>
-                            some of my past projects: <a href="http://graceguan.me/stretch">stretch reminder</a>,<br/><a href="http://graceguan.me/apaa">android phone unlocker app</a>
-                        <div class="subsubabout">
-                            graceguan [at] princeton.edu<br/>social media: @guanzgrace<br/>
-                        </div>
-                            <!--<a href="https://en.wikipedia.org/wiki/Spirograph" target="_blank">what's the background?</a>-->
-                        </div>
-                    </div>
-                </div>
+  
+            <div class="engineer-block" style="display:none;">
+                <!-- LINK TO RETURN HOME-->
+                an undergraduate electrical & computer engineering student at the
+                <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign </a><br/>
+                formerly swe intern @ <a href="http://microsoft.com/" target="_blank">Microsoft</a>, research and sde intern @ <a href="https://www.nasa.gov" target="_blank">NASA</a><br/>
+                <a id="home" class="trans">return.</a>
+            </div>
 
             <!-- ABOUT PAGE-->
-
+            
             <script>
                     var list = document.querySelectorAll("ul")[0];
                     var listItems = document.querySelectorAll("li");
@@ -101,26 +88,50 @@
                         resetIsPosition = setTimeout(function(){isOut.style.top = "" + listItems[0].getBoundingClientRect().top + "px"; }, 750);
                     };
             </script>
-                <!-- </ul> an undergraduate electrical & computer engineering student at the
-            <a style="font-style: italic" href="https://www.ece.illinois.edu"> University of Illinois Urbana-Champaign
-            </a>
-            interested in robotics, comp vis, iot, research, photography. previously worked two summers at NASA.
-        -->
-            <!--                                                      -->
 
             <!-- FADE OUT SCRIPT -->
             <script>
-                    $(".about").click(function() { 
-                        $("#home-container").fadeOut('fast', function() { 
-                            $("#about-container").fadeIn('slow'); 
-                        } );
-                    } );
-                    $(".home").click(function() {
-                        $("#about-container").fadeOut('fast', function() {
-                            $("#home-container").fadeIn('slow');
-                        });
-                    });
-                    $(".home").click();
+                var home = document.querySelector('.bio');
+                var engineer = document.querySelector('.engineer-block');
+                var isHome = true;
+                
+                document.getElementById('about').onclick = function(e) {
+                    // home.classList.toggle('transitionout');
+                    home.style.animation = "fadeOut 0.1s";
+                    home.style.WebkitAnimation = "fadeOut 0.1s";
+                    isHome = false;
+                    console.log('Click just happened');
+                }
+                document.getElementById('home').onclick = function (e) {
+                    // engineer.classList.toggle('transitionout');
+                    engineer.style.animation = "fadeOut 0.1s";
+                    engineer.style.WebkitAnimation = "fadeOut 0.1s";
+                    isHome = true;
+                    console.log('Click just happened');
+                }
+
+                home.addEventListener('animationend', function(e) {
+                    if(isHome == false) {
+                        home.style.display = "none";
+                        engineer.style.animation = "fadeIn 0.8s";
+                        engineer.style.WebkitAnimation = "fadeIn 0.8s";
+                        // engineer.classList.toggle('transitionin');
+                        engineer.style.display = "block";
+                        console.log('ishome is false');
+                    }
+                });
+
+                engineer.addEventListener('animationend', function(e) {
+                    if(isHome == true) {
+                        engineer.style.display = "none";
+                        // home.classList.toggle('transitionin');
+                        home.style.animation = "fadeIn 0.8s";
+                        home.style.WebkitAnimation = "fadeIn 0.8s";
+                        home.style.display = "block";
+                        console.log('ishome is true');
+                    }
+                });
+                
             </script>
 
             </div>
