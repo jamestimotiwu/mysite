@@ -18,6 +18,17 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+.a1 {
+    color: #000;
+    text-decoration: none;
+}
+
+.a1:hover {
+    color: rgba(81, 180, 88, 0.767);
+    font-weight: bold;
+    cursor: pointer;
+}
         
 a:hover {
     color: rgb(44, 80, 28);
@@ -52,7 +63,7 @@ a:hover {
 }
 /* to hover icon */
 .social-icon:hover {
-    fill: rgba(81, 180, 88, 0.767);;
+    fill: rgba(81, 180, 88, 0.767);
     cursor: pointer;
 }
 
@@ -75,7 +86,7 @@ a:hover {
 }
 
 .block-bio {
-    background-color: rgba(58, 197, 67, 0.829);
+    background-color: rgba(49, 179, 58, 0.89);
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue;*/
     /* margin-top: 9vh; */
@@ -109,7 +120,7 @@ a:hover {
     margin-left: 450px;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 70px;
+    padding-top: 50px;
     text-align: left;
 }
 
@@ -155,7 +166,7 @@ li.i-am {
     position: absolute;
     width: 60px;
     text-align: right;
-    color: rgb(90, 90, 90) !important;
+    color: rgb(44, 44, 44) !important;
     z-index: 100;
 }
 
@@ -256,4 +267,25 @@ li.i-am {
     -moz-transition: background-color 700ms ease-out;
     -o-transition: background-color 700ms ease-out;
     transition: background-color 700ms ease-out;
+}
+
+/** RESUME BUTTON **/
+
+.btn{
+    font-weight: bold;
+    display:block;
+    width:100px;
+    border:2px solid #ffffff;
+    color: #ffffff;
+    text-align:center;
+    margin-top:30px;
+    letter-spacing:4px;
+    font-size:12px;
+    -webkit-transition:all .3s ease;
+    transition:all .3s ease;
+}
+
+.btn:hover{
+    background-color:#3c3c3c;
+    color:#fff
 }
