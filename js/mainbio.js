@@ -20,8 +20,8 @@ document.getElementById('home').onclick = function (e) {
 home.addEventListener('animationend', function (e) {
     if (isHome == false) {
         home.style.display = "none";
-        engineer.style.animation = "fadeIn 0.5s";
-        engineer.style.WebkitAnimation = "fadeIn 0.5s";
+        engineer.style.animation = "fadeIn 0.7s";
+        engineer.style.WebkitAnimation = "fadeIn 0.7s";
         // engineer.classList.toggle('transitionin');
         engineer.style.display = "block";
         console.log('ishome is false');
@@ -32,8 +32,8 @@ engineer.addEventListener('animationend', function (e) {
     if (isHome == true) {
         engineer.style.display = "none";
         // home.classList.toggle('transitionin');
-        home.style.animation = "fadeIn 0.5s";
-        home.style.WebkitAnimation = "fadeIn 0.5s";
+        home.style.animation = "fadeIn 0.7s";
+        home.style.WebkitAnimation = "fadeIn 0.7s";
         home.style.display = "block";
         console.log('ishome is true');
     }

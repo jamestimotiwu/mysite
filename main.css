@@ -13,6 +13,13 @@ body:after {
     display: block;
     clear: both;
 }
+
+footer {
+    font-family: sans-serif;
+    font-size: 8px;
+    position: fixed;
+    bottom: 3px;
+}
             
 a {
     color: #fff;
@@ -31,7 +38,7 @@ a {
 }
         
 a:hover {
-    color: rgb(44, 80, 28);
+    color: rgba(102, 223, 110, 0.767);
     font-weight: bold;
     text-decoration: none;
     cursor:pointer;
@@ -40,6 +47,7 @@ a:hover {
 .profile-picture {
     width: 450px;
     height: 360px;
+    background-color: white;
     background-image: url(images/propic1-2.jpg);
     background-size: cover;
     float: left;
@@ -69,11 +77,12 @@ a:hover {
 
 .name {
     /* font-family: Avenir,Lato,sans-serif; */
-    font-weight: bold;
-    font-family: 'Karla', sans-serif;
+    font-family: sans-serif;
+    font-weight: bolder;
+    /* font-family: 'Karla', sans-serif; */
     letter-spacing: 0px;
     font-size: 27px;
-    padding-left: 70px;
+    padding-left: 75px;
     padding-bottom: 4vh;
 }
 
@@ -86,7 +95,7 @@ a:hover {
 }
 
 .block-bio {
-    background-color: rgba(49, 179, 58, 0.89);
+    background-color: rgba(26, 95, 31, 0.89);
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue;*/
     /* margin-top: 9vh; */
@@ -94,7 +103,7 @@ a:hover {
     font-size: 14px;
     text-align: justify;
     height: 360px;
-    color: white;
+    color: rgb(233, 233, 233);
     /*min height size of browser*/
     /* float: left; */
     line-height: 32px;
@@ -103,10 +112,13 @@ a:hover {
 }
 
 .desc {
+    /* font-family: 'Lato', sans-serif; */
+    letter-spacing: 0px;
+    font-family: 'Work Sans', sans-serif;
     margin-top: 20px;
     display: inline-block;
     text-align: left;
-    padding-left: 70px;
+    padding-left: 75px;
 }
 
 .bio {
@@ -158,6 +170,7 @@ li.i-am {
 }
 
 #is-out-of-box {
+    font-size: 15px;
     font-weight: bold;
     transition: top 0.7s;
     -moz-transition: top 0.7s;
@@ -166,16 +179,16 @@ li.i-am {
     position: absolute;
     width: 60px;
     text-align: right;
-    color: rgb(44, 44, 44) !important;
+    color: rgb(226, 226, 226) !important;
     z-index: 100;
 }
 
 /** ENGINEER PAGE **/
 .trans {
-    -webkit-transition: opacity 150ms linear; 
-    -webkit-transition: all 150ms ease-in-out; 
-    -moz-transition: all 150ms ease-in-out; 
-    -o-transition: all 150ms ease-in-out;
+    -webkit-transition: opacity 180ms linear; 
+    -webkit-transition: all 180ms ease-in-out; 
+    -moz-transition: all 180ms ease-in-out; 
+    -o-transition: all 180ms ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {
