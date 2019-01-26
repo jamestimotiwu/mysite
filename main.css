@@ -39,6 +39,7 @@ a {
         
 a:hover {
     color: rgba(102, 223, 110, 0.767);
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
     cursor:pointer;
@@ -95,7 +96,7 @@ a:hover {
 }
 
 .block-bio {
-    background-color: rgba(26, 95, 31, 0.89);
+    background-color: rgba(88, 129, 120, 0.979);
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue;*/
     /* margin-top: 9vh; */
@@ -132,7 +133,7 @@ a:hover {
     margin-left: 450px;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 50px;
+    padding-top: 40px;
     text-align: left;
 }
 
@@ -172,10 +173,10 @@ li.i-am {
 #is-out-of-box {
     font-size: 15px;
     font-weight: bold;
-    transition: top 0.7s;
-    -moz-transition: top 0.7s;
-    -webkit-transition: top 0.7s;
-    -o-transition: top 0.7s;
+    transition: top 550ms;
+    -moz-transition: top 550ms;
+    -webkit-transition: top 550ms;
+    -o-transition: top 550ms;
     position: absolute;
     width: 60px;
     text-align: right;
@@ -185,10 +186,10 @@ li.i-am {
 
 /** ENGINEER PAGE **/
 .trans {
-    -webkit-transition: opacity 180ms linear; 
-    -webkit-transition: all 180ms ease-in-out; 
-    -moz-transition: all 180ms ease-in-out; 
-    -o-transition: all 180ms ease-in-out;
+    -webkit-transition: opacity 70ms linear; 
+    -webkit-transition: all 70ms ease-in-out; 
+    -moz-transition: all 70ms ease-in-out; 
+    -o-transition: all 70ms ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {
@@ -276,6 +277,15 @@ li.i-am {
 
 .color-transition {
     background-color: rgb(0, 0, 0);
+    -webkit-transition: background-color 700ms ease-out;
+    -moz-transition: background-color 700ms ease-out;
+    -o-transition: background-color 700ms ease-out;
+    transition: background-color 700ms ease-out;
+}
+
+/**color transition for map**/
+.color-transition-map {
+    background-color: rgb(229, 227, 223);
     -webkit-transition: background-color 700ms ease-out;
     -moz-transition: background-color 700ms ease-out;
     -o-transition: background-color 700ms ease-out;

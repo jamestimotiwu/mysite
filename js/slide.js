@@ -13,7 +13,7 @@ document.getElementById('slideout').onclick = function (e) {
 document.getElementById('slideout1').onclick = function (e) {
     block.classList.toggle('slide-down');
     head.classList.toggle('slide-up');
-    body.classList.toggle('color-transition');
+    body.classList.toggle('color-transition-map');
     e.preventDefault();
     setTimeout(function () { window.location.href = document.getElementById('slideout1').href; }, 500);
 }
