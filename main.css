@@ -100,7 +100,7 @@ a:hover {
     overflow: hidden; /* keeps float in box */
     /* border: 3px solid blue;*/
     /* margin-top: 9vh; */
-    margin-left: 5vw;
+    margin-left: 5.5vw;
     font-size: 14px;
     text-align: justify;
     height: 360px;
@@ -109,7 +109,7 @@ a:hover {
     /* float: left; */
     line-height: 32px;
     letter-spacing: 1px;
-    margin-right: 5vw; /* 9vw;*/
+    margin-right: 5.5vw; /* 9vw;*/
 }
 
 .desc {
@@ -180,7 +180,7 @@ li.i-am {
     position: absolute;
     width: 60px;
     text-align: right;
-    color: rgb(226, 226, 226) !important;
+    color: rgb(255, 255, 255) !important;
     z-index: 100;
 }
 
